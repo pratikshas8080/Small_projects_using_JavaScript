@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "ZCOOL KuaiLe", display;
+}
+
+#sky {
+    background: #017cfe;
+    position: relative;
+    height: 100vh;
+}
+
+#sun {
+    background: yellow;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: 100px;
+    animation: shine 5s linear forwards;
+}
+
+// made with love by https://grohit.com/
+
+/* animation keyframes for the sun */
+
+@keyframes shine {
+    from {
+        box-shadow: 0 0 10px 10px yellow;
+        width: 50px;
+        height: 50px;
+    }
+    to {
+        width: 150px;
+        height: 150px;
+        box-shadow: 0 0 20px 20px yellow;
+    }
+}
+
+#cloud1 {
+    z-index: 100;
+    animation: drift 25s linear infinite;
+}
+
+#cloud2 {
+    z-index: 200;
+    animation: drift 35s linear infinite;
+}
+
+#cloud1,
+#cloud2 {
+    position: absolute;
+}
+
+#cloud1 {
+    top: 80px;
+    left: 100px;
+    z-index: 200;
+    .cloudLayers {
+        .layer1 {
+            width: 250px;
+            height: 100px;
+            border-radius: 50px;
+            background: #ffffff;
+            position: absolute;
+        }
+        .layer2 {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #fff;
+            top: -40px;
+            left: 120px;
+            z-index: -1;
+        }
+        .layer3 {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #fff;
+            top: -60px;
+            left: 40px;
+            z-index: -2;
+        }
+    }
+}
+
+#cloud2 {
+    top: 280px;
+    left: 50px;
+    z-index: 200;
+    .cloudLayers {
+        .layer1 {
+            width: 250px;
+            height: 100px;
+            border-radius: 50px;
+            background: #ffffff;
+            position: absolute;
+        }
+        .layer2 {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #fff;
+            top: -40px;
+            left: 120px;
+            z-index: -1;
+        }
+        .layer3 {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #fff;
+            top: -60px;
+            left: 40px;
+            z-index: -2;
+        }
+    }
+}
+
+
+/* cloud animation keyframes */
+
+@keyframes drift {
+    from {
+        transform: translateX(-600px);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateX(1800px);
+        opacity: 1;
+    }
+}
+
+.spacer {
+    height: 300px;
+}
+
+.greeting {
+    text-transform: uppercase;
+    font-size: 10em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 800px;
+}
+
+
+/* color for alternate span */
+
+.greeting span:nth-child(even) {
+    color: #2acfab;
+}
+
+.greeting span:nth-child(odd) {
+    color: white;
+}
+
+.greeting span {
+    transform-origin: 50% 70%;
+}
+
+
+/* animation for each span  */
+
+.greeting span:nth-child(1) {
+    animation: flipUp 1s ease-in-out both 5s;
+}
+
+.greeting span:nth-child(2) {
+    animation: flipUp 1s ease-in-out both 5.2s;
+}
+
+.greeting span:nth-child(3) {
+    animation: flipUp 1s ease-in-out both 5.4s;
+}
+
+.greeting span:nth-child(4) {
+    animation: flipUp 1s ease-in-out both 5.6s;
+}
+
+.greeting span:nth-child(6) {
+    animation: flipUp 1s ease-in-out both 5.8s;
+}
+
+.greeting span:nth-child(7) {
+    animation: flipUp 1s ease-in-out both 6s;
+}
+
+.greeting span:nth-child(8) {
+    animation: flipUp 1s ease-in-out both 6.2s;
+}
+
+.greeting span:nth-child(9) {
+    animation: flipUp 1s ease-in-out both 6.4s;
+}
+
+.greeting span:nth-child(10) {
+    animation: flipUp 1s ease-in-out both 6.6s;
+}
+
+.greeting span:nth-child(11) {
+    animation: flipUp 1s ease-in-out both 6.8s;
+}
+
+.greeting span:nth-child(12) {
+    animation: flipUp 1s ease-in-out both 7s;
+}
+
+@keyframes flipUp {
+    from {
+        transform: rotateX(90deg);
+    }
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+// made with love by https://grohit.com/
